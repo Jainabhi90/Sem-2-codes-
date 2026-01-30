@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather</title>
+    <style>
+
+        
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+
+        }
+        #search{
+               display: flex;
+               background-color: slategray;
+               justify-content: center;
+               align-items: center;
+               height: 15vh;
+               gap:1rem;
+
+        }
+        #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkslategray;
+             height: 85vh;
+            color: white;
+            
+        }
+        #sub{
+            display: flex;
+            
+        }
+        .many{
+            padding: 20px;
+            font-size: 40px;
+        }
+    
+    </style>
+</head>
+<body>
+
+        <div id="search">
+       <input id="input"type ="text" style="height: 30px; width: 200px ;border-radius: 5px;" placeholder="Enter location">
+       <button id ="search-button"style="border-radius: 10px;">Search</button>
+
+    </div>
+        <div id ="main">
+            <div id = "sub">
+                <div class="many" id ="cont1">12.5</div>
+                <div  class= "many ">
+                    <span id = "cont2">Delhi</span>
+                <div style="font-size: 20px;">
+                    9:15 Friday 2026-01-30
+                </div>
+                </div>
+                <div class="many"id = "cont3">
+                    ⛅️
+                    
+                </div>
+
+            </div>
+        </div>
+    
+   <script src="script.js"></script>
+</body>
+</html>
