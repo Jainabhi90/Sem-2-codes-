@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: none;
+            margin: 0;
+            background-color: rgb(165, 204, 239);
+        }
+        #root{
+          background-color: antiquewhite;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootEle = document.querySelector("#root");
+
+      let score = 0;
+      let L = 5;
+      let T = 80;
+      
+      function Game(){
+        function hii(){
+          score = score + 1;
+          L = Math.random() * 450;
+          T = Math.random() * 500 +50;
+          ReactDOM.render(<Game />, rootEle);
+        }
+        
+        return (
+          <div style={{height:"650px", width:"580px", border:"2px solid black", position:"relative", padding:"2px"}}>
+            <h1>Score: {score}</h1>
+            <div onClick={hii} style={{height:"100px", width:"100px",backgroundColor:"red", position:"absolute", cursor:"pointer", left: L, top: T}}></div>
+          </div>
+        );
+      }
+      
+      ReactDOM.render(<Game />, rootEle);
+    </script>
+  </body>
+</html>
